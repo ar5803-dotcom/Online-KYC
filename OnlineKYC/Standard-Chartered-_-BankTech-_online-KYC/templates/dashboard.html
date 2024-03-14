@@ -1,0 +1,166 @@
+{% extends "bootstrap/base.html" %} 
+{% block title %} Dashboard {% endblock %} 
+{% block styles %} 
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #ffffff; /* White background */
+        color: #000000; /* Set text color to black */
+        
+    }
+    
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #008738; /* Green button */
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px rgb(187, 186, 186);
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        color: white;
+    }
+    
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .button:active {
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    
+    .home {
+        border-radius: 8%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 10px;
+    }
+    
+    .para {
+        margin: 0 300px;
+        font-size: 15px;
+    }
+    
+    .page-header {
+        font-family: Montserrat, sans-serif;
+        font-size: 50px;
+        color: #104383; /* Black color for welcome line */
+        padding-bottom: 25px;
+        text-align: center; /* Center align */
+    }
+    
+    .tittle {
+        font-size: 40px;
+        color: #104383; /* Black color for title */
+        text-align: center; /* Center align */
+    }
+
+    .step-header {
+        font-size: 30px;
+        color: #104383; /* Black color for step headers */
+        text-align: left; /* Left align */
+    }
+</style>
+{% endblock %} 
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#">KYC VERIFICATION</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" >
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{url_for('dashboard')}}">DASHBOARD</a></li>
+                <li><a href="{{url_for('profile')}}">PROFILE</a></li>
+                <li><a href=" {{ url_for( 'logout') }} ">LOG OUT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="page-header">Welcome, {{ fname }} {{lname}}</h1>
+        <div class="tittle">KYC Verification Process</div>
+        <br>
+        <div class="para">
+            <b>The purpose of KYC (Know Your Customer) Verification is 
+            establishing the identity of any customer. 
+            In online KYC, the identity of the person is verified 
+            electronically via PAN-BASED (or any other ID) substantiation. 
+            Thus KYC provides proof of identity of the person to the service provider instantly, 
+            dispensing the need for the tedious in-person verification.
+            </b>
+        </div>
+        <br><br>
+       
+     
+        <br><br>
+        <div class="para" style="color:black;">
+            <h1 class="step-header"><b>Complete your E-KYC Verification in 3 Simple Steps :</b></h1>
+            <h3 style="padding: 0 0px; text-align: left;">
+                <b>STEP 1 : </b> Login & click the "Start Process" button on your Dashboard
+                <br><br>
+                <b>STEP 2 : </b> Upload your PAN CARD
+                <br><br>
+                <b>STEP 3 : </b> Click "Open Camera" displayed on the screen and look into the camera till the process the completed
+                <br><br>
+                <b>Your Verification process is completed and the result will be displayed on the screen</b>
+                <br><br>
+                <b>STEP 4 :</b> Add your PAN-CARD Number and your Full Name as per the PAN-CARD (Uploaded Government Id) for OCR Code Verification
+                <br><br>
+                <b>Your OCR Code Verification process is completed and the result will be displayed on the screen</b>
+                <br><br>
+            </h3>
+        </div>
+        
+      
+        
+        <center>
+            <h3 class="sub-header">Click the below button start your KYC Verification</h3>
+            <a href="{{url_for('stp1')}}" class="button" style="vertical-align:middle">
+                <span>Start Process</span>
+            </a>
+            <br><br>
+        </center>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>KYC VERIFICATION</title>
+</head>
+
+
+<body>
+    <div class="hero">
+  <div class="hero__bg">
+    <picture>
+      <img src="https://images.pexels.com/photos/1901388/pexels-photo-1901388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </picture>
+  </div>
+
+  <div class="hero__cnt">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Standard_Chartered_%282021%29.svg/560px-Standard_Chartered_%282021%29.svg.png">
+    
+   <a href="{{url_for('signup')}}" class="button" style="vertical-align:middle"> <span>Get Started</span></a>
+  </div>
+
+</div>
+
+</body>
+<style>
+    html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.hero {
+  display: grid;
+  position: relative;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+  place-items: center;
+  overflow: hidden;
+  animation: clip-hero-anim 1.25s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+  will-change: clip-path;
+}
+.hero__bg, .hero__cnt {
+  align-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.hero__bg {
+  display: grid;
+  position: relative;
+  z-index: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  animation: fade-in 0.75s linear;
+  will-change: opacity;
+}
+.hero__bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: -10%;
+  right: -10%;
+  bottom: -10%;
+  left: -10%;
+  background: rgba(255, 255, 255, 0.4);
+  background-blend-mode: screen;
+}
+.hero__bg picture {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  animation: scaling-hero-anim 4s 0.25s cubic-bezier(0, 0.71, 0.4, 0.97) forwards;
+  will-change: transform;
+}
+.hero__bg img {
+  display: block;
+  object-fit: cover;
+  object-position: 77% 50%;
+  height: auto;
+  width: 100%;
+}
+.hero__cnt {
+  display: grid;
+  position: relative;
+  place-items: center;
+  z-index: 10;
+  color: #FFF;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fade-in 0.75s 1.5s linear forwards;
+}
+.hero__cnt svg {
+  height: 12vw;
+}
+.hero__cnt svg path {
+  fill: #FFF;
+}
+.hero__cnt h1 {
+  margin-bottom: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaling-hero-anim {
+  from {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes clip-hero-anim {
+  from {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+} .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #008738;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px rgb(223, 223, 223);
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        color: white;
+    }
+    
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .button:active {
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+
+</style>
+
+</html>

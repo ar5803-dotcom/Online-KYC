@@ -1,0 +1,110 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block title %} Sign Up {% endblock %} {% block styles %} {{super()}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+     .buttonG {
+        background: #008738;
+        font-size: 16px;
+        padding: 15px;
+        background-size: 500% 100%;
+        transition: all .6s ease-in-out;
+        white-space: normal;
+        border-radius: 3px;
+        border-width: 0;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 0 20px;
+        font-weight: bold;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+
+    .buttonG:hover {
+        background-position: -50% 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        text-decoration: none;
+        color: white;
+    }
+
+    .buttonG:active {
+        background: linear-gradient(to right, #167ac6, #ff049b, #9200de, #ff049b, #167ac6);
+        background-size: 500% 100%;
+        background-position: -50% 0;
+        color: white;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        text-decoration: none;
+    }
+
+    body {
+        display: flex;
+        font-family: "Montserrat", sans-serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-size: 300% 300%;
+        background-image: white;
+        -webkit-animation: AnimateBG 20s ease infinite;
+        animation: AnimateBG 20s ease infinite;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @-webkit-keyframes AnimateBG {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Center the form */
+    .form-signin {
+        width: 300px; /* Adjust the width as needed */
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    /* Decrease the width of input fields */
+    .form-control {
+        width: 100%; /* Make input fields full width */
+    }
+</style>
+{% endblock %} {% block content %}
+<section class="multi_step_form">
+    <div class="container">
+
+        <form class="form-signin" method="POST" action="/signup" style="text-transform: capitalize;">
+            
+                <br><br><br><br><br>
+                <h2 class="form-signin-heading">Sign Up</h2>
+                <hr>
+            
+
+            {{ form.hidden_tag() }} {{ wtf.form_field(form.username) }} {{ wtf.form_field(form.fname) }} {{ wtf.form_field(form.lname) }} {{ wtf.form_field(form.email) }} {{ wtf.form_field(form.password) }}
+            <button class="btn btn-block buttonG" type="submit">SIGN UP</button>
+            <center>
+                <h4>Already have an account? </h4>
+                <a href="{{url_for('login') }}" type="button" class="buttonG">LOGIN</a></center>
+            <br><br><br><br><br>
+        </form>
+
+    </div>
+</section>
+</body>
+</html>
+<!-- /container -->
+{% endblock %}
