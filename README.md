@@ -1,9 +1,6 @@
 # Standard-Chartered-_-BankTech-_online-KYC
 Online KYC Verification with Deepface,OpenCv and Pytesseract
 
-## Video Demo:
-
-[Link to Video Demo](https://drive.google.com/file/d/1zLG0OEUT8-mqoVdfDPpP3AVtYwewkX3a/view?usp=sharing)
 
 ### Pls go through the below workflow before watching the video.
 
