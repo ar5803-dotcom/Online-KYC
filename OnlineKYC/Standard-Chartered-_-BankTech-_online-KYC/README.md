@@ -30,7 +30,6 @@ Online KYC Verification with Deepface,OpenCv and Pytesseract
 
 ## Step 4 : OCR Verification and comparison for user input PAN Numner and the PAN Number in the submitted card image
 
-![step4](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/e6ae9826-b345-4d38-8e89-b930ce0654f1)
 
 ![step4-i](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/d61338b7-72f9-4694-bca7-3ec7a488452c)
 
