@@ -19,7 +19,7 @@ Online KYC Verification with Deepface,OpenCv and Pytesseract
 ## Step 2 : Face Extraction from the uploaded image 
 
 
-## Step 3 : Live casmera verification 
+## Step 3 : Live camera verification 
 
 ![step3](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/7dde033d-2757-4f0d-bd71-0d85d3ab5af7)
 
