@@ -16,8 +16,6 @@ Online KYC Verification with Deepface,OpenCv and Pytesseract
 
 ## Step 1 : To upload photo of Pancard
 
-![stp1](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/7ffaf74c-768b-4199-9187-2a3c104a410d)
-
 ## Step 2 : Face Extraction from the uploaded image 
 
 ![step2](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/ebe4bf41-3a82-4ab8-be66-c8f9de974cd5)
@@ -37,15 +35,6 @@ Online KYC Verification with Deepface,OpenCv and Pytesseract
 ## Step 5 : Updation in the profile page 
 
 ![step5](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/c25f6800-3676-4374-98fb-b84d6118aa75)
-
-## Team Banktech
-
-- Anuj Jha
-- Dimpy Singh
-- Aayush Kumar
-- Akash Kumar Singh
-- Sarthak Agarwal
-- Divyanshu Divya
 
 ## Packages and Libraries Used
 
