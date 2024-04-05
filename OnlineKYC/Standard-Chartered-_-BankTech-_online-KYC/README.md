@@ -19,11 +19,8 @@ Online KYC Verification with Deepface,OpenCv and Pytesseract
 
 ## Step 1 : To upload photo of Pancard
 
-![stp1](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/7ffaf74c-768b-4199-9187-2a3c104a410d)
 
 ## Step 2 : Face Extraction from the uploaded image 
-
-![step2](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/ebe4bf41-3a82-4ab8-be66-c8f9de974cd5)
 
 ## Step 3 : Live casmera verification 
 
@@ -33,7 +30,6 @@ Online KYC Verification with Deepface,OpenCv and Pytesseract
 
 ## Step 4 : OCR Verification and comparison for user input PAN Numner and the PAN Number in the submitted card image
 
-![step4](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/e6ae9826-b345-4d38-8e89-b930ce0654f1)
 
 ![step4-i](https://github.com/AnujxRobin/Standard-Chartered-_-BankTech-_online-KYC/assets/131231136/d61338b7-72f9-4694-bca7-3ec7a488452c)
 
